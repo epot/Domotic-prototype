@@ -1,0 +1,84 @@
+<ACTUATOR>
+<version number="1.0.4"></version>
+<!-- inserire i nomi degli attuatori ed il loro indirizzo es:
+valori gruppo e pull non abilitati in questa versione
+valori di type (1 luce , 2 automazione)
+
+insert here the name of actuator with address eg:
+values of group and pull is not allowed in this version
+values of type (1 lighting, 2 automation)
+
+<device name="lampadario sala" point="11" group="" pull="" type="1"></device>
+<device name="tapparella sala" point="12" group="" pull="" type="2"></device>
+-->
+
+
+<!-- inserire i nomi degli ausiliari / insert the name of the auxilliary -->
+<aux name="aux 1" number="1"></aux>
+<aux name="aux 2" number="2"></aux>
+<aux name="aux 3" number="3"></aux>
+<aux name="aux 4" number="4"></aux>
+<aux name="aux 5" number="5"></aux>
+<aux name="aux 6" number="6"></aux>
+<aux name="aux 7" number="7"></aux>
+<aux name="aux 8" number="8"></aux>
+<aux name="aux 9" number="9"></aux>
+
+<!-- inserire i nomi dei gruppi / insert the name of the groups
+<group name="gruppo 1" group="1"></group>
+-->
+
+<!-- inserire i nomi dei carichi / insert the name of the loads
+<load name="carico 1" priority="1"></load>
+-->
+
+<!-- inserire i nomi delle sonde / insert the name of the probe
+<probe name="sonda 1" number="1"></probe>
+-->
+<probe name="Piano 1" number="1"></probe>
+<probe name="Piano 2" number="2"></probe>
+
+<!-- inserire i nomi delle telecamere, il numero (max.12), l'indirizzo (es.4001) e il tipo (1 montante privato o 2 montante pubblico) / insert the name of the camera, the number (max.12), the address (eg.4001) and type (1 private riser or 2 public riser)
+
+es. camera sala, numero 1, indirizzo 4001, montante privato = <camera name="camera sala" number="1" adr="4001" type="1"></camera>
+citofono, numero 2, indirizzo 4001, montante pubblico = <camera name="citofono" number="1" adr="4001" type="2"></camera>
+
+<camera name="camera n.1" number="1" adr="4001" type="1" ></camera>
+-->
+
+<!-- inserire i nomi dei scenari modulo/centr.F420 ed il suo indirizzo (APL)/ insert the name of the f420 scenarios module with the address (APL)-->
+<!--
+<scf420 name="Scenario 1" number="1" adr="01"></scf420>
+<scf420 name="Scenario 2" number="2" adr="01"></scf420>
+<scf420 name="Scenario 3" number="3" adr="01"></scf420>
+<scf420 name="Scenario 4" number="4" adr="01"></scf420>
+<scf420 name="Scenario 5" number="5" adr="01"></scf420>
+<scf420 name="Scenario 6" number="6" adr="01"></scf420>
+<scf420 name="scenario 7" number="7" adr="01"></scf420>
+<scf420 name="scenario 8" number="8" adr="01"></scf420>
+<scf420 name="scenario 9" number="9" adr="01"></scf420>
+<scf420 name="scenario 10" number="10" adr="01"></scf420>
+<scf420 name="scenario 11" number="11" adr="01"></scf420>
+<scf420 name="scenario 12" number="12" adr="01"></scf420>
+<scf420 name="Scenario 13" number="13" adr="01"></scf420>
+<scf420 name="Scenario 14" number="14" adr="01"></scf420>
+<scf420 name="Scenario 15" number="15" adr="01"></scf420>
+<scf420 name="Scenario 16" number="16" adr="01"></scf420>
+-->
+
+<!-- inserire i nomi dei scenari mh200 (max 100) / insert the name of the mh200 scenarios (max 100)
+     cenact = comando cen per abilitare lo scenario : A PL PULSANTE(due numeri es.01) / cenact = cen command for enable scenario : A PL BUTTON(two number eg.01)
+     cendis = comando cen per disabilitare lo scenario : A PL PULSANTE(due numeri es.01) / cendis = cen command for disable scenario : A PL BUTTON(two number eg.01)
+     fstart = comando cen o own per lanciare lo scenario (es. "*1*1*11##" o "*15*01*11##") / fstart = cen or own command for start the scenario (eg. "*1*1*11##" o "*15*01*11##")
+     NON ANCORA DISPONIBILE NELLA VERSIONE 0.98BETA / STILL NOT AVAIABLE IN 0.98BETA VERSION 
+-->
+<!--
+<scmh200 name="scenario n.1" number="1" cenact="0101" cendis="0101" fstart="*1*1*11##" ></scmh200>
+-->
+</ACTUATOR> 
+
+
+
+
+
+

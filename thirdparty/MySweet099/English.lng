@@ -1,0 +1,462 @@
+####################################
+# MYSWEETHOME - CONFIGURATION FILE #
+####################################
+
+# Lingua # Language #
+[Version]
+ini=1.0.4
+
+[error]
+xmlActDup=Actuator \n duplicate
+xmlGrDup=Group \n duplicate
+xmlAuxDup=Auxilliary \n duplicate
+xmlProbeDup=Probe \n duplicate
+xmlCameraDup=Camera \n duplicate
+xmlf420Dup=F420 scenario \n duplicate
+xml200Dup=Mh200 scenario \n duplicate
+xmlLoadDup=Load \n duplicate
+xmlGrErr=Invalid group
+xmlAuxErr=Auxilliary invalid
+xmlProbeErr=Invalid probe
+xmlCameraErr=Invalid camera
+xmlf420Err=Invalid F420 scenario
+xml200Err=Invalid Mh200 scenario
+xmlcenAErr=Invalid cen comand activation
+xmlcenDErr=Invalid cen comand disactivation
+xmlLoadErr=Load invalid
+xmlgen=Invalid parameters in the file conf.xml
+xmlold=Old version of file Xml
+iniold=Old version of file lng
+comdetect=device detect on COM
+nodetect=device not found
+aglimit=Agent work for 10 messages, only the supporter have no limit
+
+[menu]
+File=File
+Save=Save
+Exit=Exit
+Language=Language
+Tool=Tools
+Find=Find
+Options=Options
+windows=Windows
+waux=Aux
+wprobe=Thermal probe
+wcamera=Camera
+wvolt=Voltmetr
+Wcurrent=Ampermetr
+wwatt=Wattmetr
+Agg=Check for update
+Donate=Donate
+About=About..
+Help=Help
+
+[tooltip]
+but1=Start/Stop monitor
+but2=Save
+but3=aux window
+but4=probe window
+but5=camera window
+but6=instrumentation windows
+but7=Clear
+but8=Options
+cexp=Advanced controls
+
+[text]
+lastmsg=Last message:
+txtFile=Text file
+IpAdr=WS IP Address
+Port=WS Port
+Exit=Exit
+txtPwCon=Open password required, open your range ip for \ip
+NoAck=Ack non recived after 3 times
+StatDis=Disconnected from server
+NoCon=Connection not allowed
+Sended=Sended
+WaitCon=Waiting for connection ...
+StatCon=Connected
+Open=Open
+Open2=MyEnergy
+Open3=ScenarX
+Options=Options
+RClick=Click with right button to open menù
+NoComm=Port not allowed
+NoUsb=Interface do not respond
+Stop=Stop
+StartMon=Waiting for connection...
+Start=Start
+Traystart=Start monitor
+Traystop=Stop monitor
+LogStart=*START MONITOR SESSION*
+LogStop=*STOP MONITOR SESSION*
+ErrTrad=Translate Error.
+Command=Command
+Monitor=Monitor
+Monstart=Monitor session started
+ComStart=*START COMMAND SESSION*
+ComStop=*END COMMAND SESSION*
+UpdChk=Check in progress ...
+UpdReady=Update available
+UpdAct=Current version
+UpdNew=Server version
+UpdDwn=Download the new version
+NoUpd=No Update available. Program is up-to-date.
+updErr=Update page not found. Please, manual check update.
+refresh=Refresh
+link=Link to the program home page.
+nofound=Not found
+ontop=alwais on-top
+Options=Options
+Connection=Connection
+General=General
+Message=Text / Voice messages 
+Launch=Quick launch
+Protocol=Protocol
+Colmon=Monitor colour
+ColCom=Command Colour
+Stupmon=Start-up monitor
+Stupmin=Start-up minimized
+Stupchk=Check update at St-up
+who0=Lighting
+who1=Automation
+who2=Power managem.
+who3=Thermo control
+who4=Securety
+who5=Video
+who6=Aux
+who7=Device
+who8=Audio
+Pcam0=Brightness
+Pcam1=Contrast
+Pcam2=Colour
+Pcam3=Zoom
+Pcam4=Cicle time
+Pcam5=Quality
+Useagent=Use agent
+Agnone=None
+Aghide=Hide agent
+Agsound=Enabled sound
+
+
+# OPEN WEBNET #
+
+#Suffisso per luci ed automazione (\c)
+#Suffix for light and automation (\c)
+
+[wholight]
+0=Light
+1=Light Group
+2=Rolling Shutter
+3=R.shutter Group
+
+
+#Comando luce (usare \c per il suffisso, \n per il nome\numero della luce )
+#Light command (use \c for suffix, \n for the name\number of the light)
+
+[light]
+0=\c \n OFF
+0#=\c \n OFF at speed \v
+1=\c \n ON
+1#=\c at speed \v
+2=\c \n 20%
+3=\c \n 30%
+4=\c \n 40%
+5=\c \n 50%
+6=\c \n 60%
+7=\c \n 70%
+8=\c \n 80%
+9=\c \n 90%
+10=\c \n 100%
+11=\c \n ON 1 minute
+12=\c \n ON 2 minutes
+13=\c \n ON 3 minutes
+14=\c \n ON 4 minutes
+15=\c \n ON 5 minutes
+16=\c \n ON 15 minutes
+17=\c \n ON 30 seconds
+18=\c \n ON 0.5 seconds
+19=\c \n broken
+20=\c \n blink 0.5 seconds
+21=\c \n blink 1 seconds
+22=\c \n blink 1.5 seconds
+23=\c \n blink 2 seconds
+24=\c \n blink 2.5 seconds
+25=\c \n blink 3 seconds
+26=\c \n blink 3.5 seconds
+27=\c \n blink 4 seconds
+28=\c \n blink 4.5 seconds
+29=\c \n blink 5 seconds
+30=\c \n livel up
+31=\c \n livel down
+
+
+#Comando dell'automazione (usare \c per il suffisso, \n per il nome\numero dell'automazione)
+#Automation command (use \c for suffix, \n for the name\number of the automation)
+
+[automation]
+0=\c \n STOP
+1=\c \n UP
+2=\c \n DOWN
+
+
+#Suffisso per gestione energia (\c)
+#Suffix for power control (\c)
+
+[whopower]
+0=General
+1=Load
+2=Unit
+
+
+#Comando gestione energia (usare \c per il suffisso, \n per il nome\numero del carico, \d per dati ricevuti)
+#power control command (use \c for suffix, \n for the name\number load, \d for recived data)
+
+[power]
+0=\c \n Disabled
+1=\c \n Enabled
+2=\c \n Forced
+3=\c \n Forced end
+v=Tension \dV
+a=Current \dA
+w=Power \dW
+e=Energy \d
+
+
+#Comandi termoregolazione (usare \z per la zona, \m per il modo funzionamento)
+#Thermo command (use \z for the zone, \m for the function mode)
+
+[Whothermo]
+0=unit \m
+1=zone \z
+
+
+#Comandi zona termoregolazione (usare \z per la zona)
+#Thermo zone command (use \z for the zone)
+
+[thermo]
+1=Zone \z Heating mode 
+2=Zone \z Cooling mode 
+20=Remote control disable
+21=Remote control enable
+22=At least one probe OFF
+23=At least one probe in anti-freeze
+24=At least one probe in manual
+30=Failure discovered
+31=Central unit battery KO
+40=Release of sensor local adjustment
+102=Anti-Freeze
+202=Thermal Protection
+302=Protection (generic)
+103=OFF – Heating mode
+203=OFF – Cooling mode
+303=OFF (Generic)
+104=Provisional mode - Heating
+204=Provisional mode - Cooling
+304=Provisional mode – Generic
+110=Manual adjustment mode - Heating
+210=Manual adjustment mode - Cooling
+310=Manual adjustment mode Generic
+111=Programming mode - Heating
+211=Programming mode - Cooling
+311=Programming mode Generic
+115=Holiday daily plan – Heating mode
+215=Holiday daily plan – Cooling mode
+315=Holiday daily plan – Generic mode
+13xxx=Vacation scenario for \n days – Heating mode
+23xxx=Vacation scenario for \n days – Cooling mode
+33xxx=Vacation scenario for \n days – Generic mode
+3000=Vacation scenario disable x
+110x=Heating program \n
+210x=Cooling program \n
+310x=Generic program \n
+3100=Last activated program
+12xx=Heating SCENARIO \n
+22xx=Cooling SCENARIO \n
+32xx=Generic SCENARIO \n
+3200=Last activated SCENARIO
+112=Heating timed
+212=Cooling timed
+312=Generic timed
+
+
+#Dimensioni termoregolazione (usare \t per la temperatura, \z per la zona)
+#Thermo dimension (use \t for temperature, \z for the zone)
+
+[DimThermo]
+0=measure \t°c on zone \z
+12=setpoint  \t°c on zone \z mode \m
+13=local offset \n on Zone \z
+14=expected \t°c on zone \z mode \m
+19=valve zone \z cooling \vc heating \vr
+
+
+#Descrizione modo funzionamento
+#Description for function mode
+
+[modthermo]
+1=Heating
+2=Cooling
+3=Generic
+
+
+#Descrizione funzionamento manopola
+#Description for function knob
+
+[knobthermo]
+00=knob value 0
+01=knob value +1
+02=knob value +2
+03=knob value +3
+4=knob value OFF
+5=knob value local protection
+11=knob value -1
+12=knob value -2
+13=knob value -3
+
+
+#Descrizione stato valvole
+#Description of valve state
+
+[valvethermo]
+0=OFF
+1=ON
+2=Open
+3=close
+4=Stop
+5=OFF Fan Coil
+6=ON speed 1
+7=ON speed 2
+8=ON speed 3
+9=ON fan coil
+
+
+#Suffisso per sicurezza (\c , usare \z per il nome\numero della zona)
+#Suffix for security (\c , use \z for the name\number of the zone)
+
+[whosecurity]
+0=zone \z
+
+
+#Comandi sicurezza (usare \c per il suffisso, \n per il nome\numero dispositivo)
+#Security command (use \c for suffix, \n for the name\number of device)
+
+[security]
+0=Maintenance
+1=Active
+2=Disactive
+3=Delay end
+4=System battery fault
+5=Battery OK
+6=NO network
+7=Network present
+8=Engage
+9=Disengage
+10=Battery unloads
+11=\c active
+12=\c technical alarm
+13=\c Reset technical alarm
+14=No reception ACK disp. \n  \c
+15=\c intrusion alarm
+16=\c Alarm 24h / Tampering
+17=\c anti-panic Alarm
+18=\c non active
+26=Start programming
+27=Stop programming
+31=Silent Alarm \c
+
+
+#Comandi Ausiliari (usare \n per il nome\numero ausiliario)
+#Aux command (use \n for the name\number of the auxilliary)
+
+[aux]
+0=Auxilliary \n OFF
+1=Auxilliary \n ON
+2=Auxilliary \n TOGGLE
+3=Auxilliary \n STOP
+4=Auxilliary \n SU
+5=Auxilliary \n GIU
+6=Auxilliary \n ENABLED
+7=Auxilliary \n DISABLED
+8=Auxilliary \n RESET_GEN
+9=Auxilliary \n RESET_BI
+10=Auxilliary \n RESET_TRI
+
+
+#Comandi Video (usare \n per il nome\numero telecamera, \x per la coordinata x, \y per la coordinata y)
+#Video command (use \n for the name\number of the camera, \x for the coordinate x, \y for the coordinate y)
+
+[video]
+0=Receive video \n
+8=Free video channel \n
+9=Free A/V resources \n
+120=Zoom in
+121=Zoom out
+130=+X immage
+131=-X immage
+140=+Y immage
+141=-Y immage
+150=Luminosity +
+151=Luminosity -
+160=Contrast +
+161=Contrast -
+170=Colour +
+171=Colour -
+180=Quality +
+181=Quality -
+300=Display dial \x-\y
+
+
+#Informazioni sulle telecamere
+#Information about the cameras
+
+[whovideo]
+4001=camera living room
+4002=camera kitchen
+4003=camera bedroom
+4004=camera 2 floor
+5000=last vct selected
+
+
+#Informazioni sul dispositivo gateway (usare \h per l'ora, \ww giorno della settimana, \dd giorno, \mm mese, \aa anno, \n numero, \m modello gw)
+#Information about gateway device (use \h for hour, \ww day of week, \dd day, \mm month, \aa year, \n number, \m type of gw)
+
+
+[device]
+0=Time \h
+1=\ww \dd\\mm\\aa
+10=IP Address \n
+11=netmask \n
+12=MAC address \n
+15=Connected with \m
+16=FW version \n
+19=Startup time, Days \n
+22=Date \dd\\mm\\aa Ora \h
+23=Kernel \n
+24=Distribution \n
+
+
+#Informazioni sul giorno
+#Information about the day
+
+[daydevice]
+0=Sunday
+1=Monday
+2=Tuesday
+3=wednesday
+4=Thursday
+5=Friday
+6=Saturday
+
+
+#Informazioni sul dispositivo connesso
+#Information about connected device
+
+[devmodel]
+2=MHServer
+4=MH200
+6=F452
+7=F452V
+11=MHServer2
+12=F453AV
+13=H4684
+27=H4686sdk

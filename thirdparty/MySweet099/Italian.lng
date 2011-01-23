@@ -1,0 +1,478 @@
+####################################
+# MYSWEETHOME - CONFIGURATION FILE #
+####################################
+
+
+# Lingua # Language #
+[Version]
+ini=1.0.4
+
+[error]
+xmlActDup=Attuatore \n duplicato
+xmlGrDup=Gruppo \n duplicato
+xmlAuxDup=Ausiliario \n duplicato
+xmlProbeDup=Sonda \n temperatura duplicata
+xmlCameraDup=Telecamera \n duplicata
+xmlf420Dup=Scenario \n F420 duplicato
+xml200Dup=Scenario \n MH200 duplicato
+xmlLoadDup=Carico \n duplicato
+xmlGrErr=Gruppo non valido
+xmlAuxErr=Ausiliario non valido
+xmlProbeErr=Sonda temperatura non valida
+xmlCameraErr=Telecamera non valida
+xmlf420Err=Scenario F420 non valido
+xml200Err=Scenario Mh200 non valido
+xmlcenAErr=Comando attivazione cen non valido
+xmlcenDErr=Comando disattivazione cen non valido
+xmlLoadErr=Carico non valido
+xmlgen=Parametri non validi sul file conf.xml
+xmlold=Versione obsoleta del file Xml
+iniold=Versione obsoleta del file lng
+comdetect=periferica trovata su COM
+nodetect=periferica non trovata
+aglimit=Agente disponibile per 10 messaggi, i sostenitori non hanno limite
+
+[menu]
+File=File
+Save=Salva
+Exit=Esci
+Language=Lingua
+Tool=Strumenti
+Find=Cerca
+Options=Opzioni
+windows=Finestre
+waux=Aux
+wprobe=Sonde temperatura
+wcamera=Camera
+wvolt=Voltmetro
+Wcurrent=Ampermetro
+wwatt=Wattmetro
+Agg=Controllo Aggiornamenti
+Donate=Donazione
+About=About..
+Help=Aiuto
+
+[tooltip]
+but1=Avvia/Ferma monitor
+but2=Salva
+but3=Finestra aux
+but4=Finestra sonde
+but5=Finestra telecamere
+but6=Finestra strumentazione
+but7=Cancella
+but8=Opzioni
+cexp=Controlli avanzati
+
+[text]
+lastmsg=Ultimo messaggio:
+txtFile=File di testo
+IpAdr=Indirizo IP WS
+Port=Porta WS
+Exit=Esci
+txtPwCon=Password open richiesta, aprire range ip per \ip
+NoAck=Ack non ricevuto dopo 3 tentativi
+StatDis=Disconnesso dal server
+NoCon=Connesisone non disponibile
+Sended=Inviato
+WaitCon=Attesa connessione ...
+StatCon=Connesso
+Open=Apri
+Open2=MyEnergy
+Open3=ScenarX
+Options=Opzioni
+RClick=Clicca con il destro per aprire il menù
+NoComm=Porta non disponibile
+NoUsb=L'interfaccia non risponde
+Stop=Stop
+StartMon=Attesa connessione...
+Start=Start
+Traystart=Avvia monitor
+Traystop=Ferma monitor
+LogStart=*AVVIO SESSIONE MONITOR*
+LogStop=*STOP SESSIONE MONITOR*
+ErrTrad=Errore traduzione.
+Command=Comandi
+Monitor=Monitor
+Monstart=Sessione monitor avviata
+ComStart=*AVVIO SESSIONE COMANDI*
+ComStop=*FINE SESSIONE COMANDI*
+UpdChk=Controllo in corso ...
+UpdReady=Aggiornamento disponibile
+UpdAct=Versione attuale
+UpdNew=Versione server
+UpdDwn=Scarica la nuova versione
+NoUpd=Nessun aggiornamento disponibile. il programma e' aggiornato.
+updErr=Impossibile trovare la pagina. Controllare manualmente.
+refresh=Aggiorna
+link=Link al sito del programma.
+nofound=Non trovato
+ontop=In primo piano
+Options=Opzioni
+Connection=Connessione
+General=Generale
+Message=Messaggi testo / vocali
+Launch=Avvio rapido
+Protocol=Protocollo
+Colmon=Colore monitor
+ColCom=Colore comandi
+Stupmon=Avvia monitor
+Stupmin=Avvia minimizzato
+Stupchk=Controlla agg. all'avvio
+who0=Illuminazione
+who1=Automazione
+who2=Controllo carichi
+who3=Termoregolazione
+who4=Sicurezza
+who5=Video
+who6=Aux
+who7=Dispositivi
+who8=Audio
+Pcam0=Luminosità
+Pcam1=Contrasto
+Pcam2=Colore
+Pcam3=Zoom
+Pcam4=Tempo cicla
+Pcam5=Qualità
+Useagent=Utilizza agente
+Agnone=Nessuno
+Aghide=Nascosto
+Agsound=Abilita suoni
+
+
+# OPEN WEBNET #
+
+#Suffisso per luci ed automazione (\c)
+#Suffix for light and automation (\c)
+
+[wholight]
+0=Luce
+1=Gruppo luci
+2=Tapparella
+3=Gruppo tapparelle
+
+
+#Comando luce (usare \c per il suffisso, \n per il nome\numero della luce )
+#Light command (use \c for suffix, \n for the name\number of the light)
+
+[light]
+0=\c \n OFF
+0#=\c \n OFF a velocità \v
+1=\c \n ON
+1#=\c a velocità \v
+2=\c \n 20%
+3=\c \n 30%
+4=\c \n 40%
+5=\c \n 50%
+6=\c \n 60%
+7=\c \n 70%
+8=\c \n 80%
+9=\c \n 90%
+10=\c \n 100%
+11=\c \n ON 1 minuto
+12=\c \n ON 2 minuti
+13=\c \n ON 3 minuti
+14=\c \n ON 4 minuti
+15=\c \n ON 5 minuti
+16=\c \n ON 15 minuti
+17=\c \n ON 30 secondi
+18=\c \n ON 0.5 secondi
+19=\c \n guasta
+20=\c \n lampeggio 0.5 secondi
+21=\c \n lampeggio 1 secondo
+22=\c \n lampeggio 1.5 secondi
+23=\c \n lampeggio 2 secondi
+24=\c \n lampeggio 2.5 secondi
+25=\c \n lampeggio 3 secondi
+26=\c \n lampeggio 3.5 secondi
+27=\c \n lampeggio 4 secondi
+28=\c \n lampeggio 4.5 secondi
+29=\c \n lampeggio 5 secondi
+30=\c \n livello su
+31=\c \n livello giu
+
+
+#Comando dell'automazione (usare \c per il suffisso, \n per il nome\numero dell'automazione)
+#Automation command (use \c for suffix, \n for the name\number of the automation)
+
+[automation]
+0=\c \n STOP
+1=\c \n SU
+2=\c \n GIU
+
+
+#Suffisso per gestione energia (\c)
+#Suffix for power control (\c)
+
+[whopower]
+0=Generale
+1=Carico
+2=Centrale
+
+
+#Comando gestione energia (usare \c per il suffisso, \n per il nome\numero del carico, \d per dati ricevuti)
+#power control command (use \c for suffix, \n for the name\number load, \d for recived data)
+
+[power]
+0=\c \n Disabilitato
+1=\c \n Abilitato
+2=\c \n Forzato
+3=\c \n Fine forzatura
+v=Tensione \dV
+a=Corrente \dA
+w=Potenza \dW
+e=Energia \d
+
+
+#Comandi termoregolazione (usare \z per la zona, \m per il modo funzionamento)
+#Thermo command (use \z for the zone, \m for the function mode)
+
+[Whothermo]
+0=centrale \m
+1=zona \z
+
+#Comandi zona termoregolazione (usare \z per la zona)
+#Thermo zone command (use \z for the zone)
+
+[thermo]
+1=Zona \z Modo Riscaldamento 
+2=Zona \z Modo Condizionamento 
+20=Controllo remoto disabilitato
+21=Controllo remoto abilitato
+22=Una sonda OFF
+23=Una sonda antigelo
+24=Una sonda in manuale
+30=Trovato un guasto
+31=Batteria della centrale KO
+40=Rilasciato sensore variazione locale
+102=Antigelo
+202=Protezione termica
+302=Protezione (generico)
+103=OFF – Modo riscaldamento
+203=OFF – Modo Condizionamento 
+303=OFF (Generico)
+104=Modo provvisorio - Riscaldamento
+204=Modo provvisorio - Condizionamento
+304=Modo provvisorio – Generico
+110=Modo manuale - Riscaldamento
+210=Modo manuale - Condizionamento
+310=Modo manuale - Generico
+111=Modo programmazione - Riscaldamento
+211=Modo programmazione - Condizionamento
+311=Modo programmazione - Generico
+115=Piano festivo – Modo riscaldamento
+215=Piano festivo – Modo Condizionamento 
+315=Piano festivo – Modo Generico
+13xxx=Scenario vacanze per \n giorni – Modo riscaldamento
+23xxx=Scenario vacanze per \n giorni – Modo condizionamento
+33xxx=Scenario vacanze per \n giorni – Modo generico
+3000=Scenario vacanze disabilitato
+110x=Programma \n riscaldamento
+210x=Programma \n Condizionamento 
+310x=Programma \n Generico
+3100=Ultimo programa attivato
+12xx=Scenario \n  riscaldamento
+22xx=Scenario \n Condizionamento
+32xx=Scenario \n Generico
+3200=Ultimo Scenario attivato
+112=Riscaldamento Temporizzato
+212=Condizionamento Temporizzato
+312=Generico timed Temporizzato
+
+
+#Dimensioni termoregolazione (usare \t per la temperatura, \z per la zona)
+#Thermo dimension (use \t for temperature, \z for the zone)
+
+[DimThermo]
+0=misurata \t°c in zona \z
+12=setpoint \t°c in zona \z modo \m
+13=Variazione locale \n in Zona \z
+14=prevista \t°c in zona \z modo \m
+19=valvola zona \z cond. \vc risc. \vr
+
+
+#Descrizione modo funzionamento
+#Description for function mode
+
+[modthermo]
+1=Riscaldamento
+2=Condizionamento
+3=Generico
+
+
+#Descrizione funzionamento manopola
+#Description for function knob
+
+[knobthermo]
+00=Manopola su 0
+01=Manopola +1
+02=Manopola +2
+03=Manopola +3
+4=Manopola OFF
+5=Manopola Protezione locale
+11=Manopola -1
+12=Manopola -2
+13=Manopola -3
+
+
+#Descrizione stato valvole
+#Description of valve state
+
+[valvethermo]
+0=OFF
+1=ON
+2=Open
+3=close
+4=Stop
+5=OFF Fan Coil
+6=ON speed 1
+7=ON speed 2
+8=ON speed 3
+9=ON fan coil
+
+
+#Suffisso per sicurezza (\c , usare \z per il nome\numero della zona)
+#Suffix for security (\c , use \z for the name\number of the zone)
+
+[whosecurity]
+0=zona \z
+
+
+#Comandi sicurezza (usare \c per il suffisso, \n per il nome\numero dispositivo)
+#Security command (use \c for suffix, \n for the name\number of device)
+
+[security]
+0=Manutenzione
+1=Attivo
+2=Disattivo
+3=Fine ritardo
+4=Batteria sistema Guasta
+5=Batteria OK
+6=Rete non presente
+7=Rete presente
+8=Inserito
+9=Disisnserito
+10=Batteria scollegata
+11=\c attiva
+12=\c Allarme tecnico
+13=\c Reset allarme tecnico
+14=Mancato ACK disp. \n  \c
+15=\c Allarme intrusione
+16=\c Allarme 24h / Tamper
+17=\c Allarme antipanico
+18=\c non attiva
+26=Inizio programmazione
+27=Fine programmazione
+31=Allarme tacito da \c
+
+
+#Comandi Ausiliari (usare \n per il nome\numero ausiliario)
+#Aux command (use \n for the name\number of the auxilliary)
+
+[aux]
+0=Ausiliario \n OFF
+1=Ausiliario \n ON
+2=Ausiliario \n TOGGLE
+3=Ausiliario \n STOP
+4=Ausiliario \n SU
+5=Ausiliario \n GIU
+6=Ausiliario \n ABILITATO
+7=Ausiliario \n DISABILITATO
+8=Ausiliario \n RESET_GEN
+9=Ausiliario \n RESET_BI
+10=Ausiliario \n RESET_TRI
+
+
+#Comandi Video (usare \n per il nome\numero telecamera, \x per la coordinata x, \y per la coordinata y)
+#Video command (use \n for the name\number of the camera, \x for the coordinate x, \y for the coordinate y)
+
+[video]
+0=Ricevi video \n
+8=Rilascio canale video \n
+9=Rilascio risorse A/V \n
+120=Zoom in
+121=Zoom out
+130=+X immagine
+131=-X immagine
+140=+Y immagine
+141=-Y immagine
+150=Luminosità +
+151=Luminosità -
+160=Contrasto +
+161=Contrasto -
+170=Colore +
+171=Colore -
+180=Qualità +
+181=Qualità -
+300=Visualizza quadrante \x-\y
+
+
+#Informazioni sulle telecamere
+#Information about the cameras
+
+[whovideo]
+4001=telecamera sala
+4002=telecamera cucina
+4003=telecamera camera
+4004=telecamera piano2
+5000=ultima telecamera
+
+
+#Informazioni sul dispositivo gateway (usare \h per l'ora, \ww giorno della settimana, \dd giorno, \mm mese, \aa anno, \n numero, \m modello gw)
+#Information about gateway device (use \h for hour, \ww day of week, \dd day, \mm month, \aa year, \n number, \m type of gw)
+
+[device]
+0=Ora \h
+1=\ww \dd\\mm\\aa
+10=Indirizzo IP \n
+11=netmask \n
+12=indirizzo mac \n
+15=Connesso con \m
+16=Versione FW \n
+19=Tempo startup Giorni \n
+22=Data \dd\\mm\\aa Ora \h
+23=Kernel \n
+24=Distribuzione \n
+
+
+#Informazioni sul giorno
+#Information about the day
+
+[daydevice]
+0=Domenica
+1=Lunedì
+2=Martedì
+3=Mercoledì
+4=Giovedì
+5=Venerdì
+6=Sabato
+
+
+#Informazioni sul dispositivo connesso
+#Information about connected device
+
+[devmodel]
+2=MHServer
+4=MH200
+6=F452
+7=F452V
+11=MHServer2
+12=F453AV
+13=H4684
+27=H4686sdk
+
+
+[audio]
+0=Amplificatore ON / so. base \n
+3=Amplificatore ON / so. Stereo \n
+10=Amplificatore OFF / so. base \n
+13=Amplificatore OFF / so. Stereo \n
+20=cicla sorgente (base) \n
+23=cicla sorgente (stereo) \n
+30=Sleep on base
+33=Sleep on stereo
+40=Sleep OFF
+50=Follow me base
+53=Follow me stereo
+100=Sorgente occupata
+101=Start invio RDS
+102=Stop invio RDS
