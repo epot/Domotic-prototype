@@ -5,6 +5,9 @@ from opennitoo.lightbuscommand import LightBusCommand
 from commands.lightcommand import LightCommand
 from model.lightmodel import LightModel
 
+import PyQt4
+from PyQt4 import QtGui, QtCore
+
 def initSerial():
     ser = serial.Serial(2)
     ser.setTimeout(0.5)
