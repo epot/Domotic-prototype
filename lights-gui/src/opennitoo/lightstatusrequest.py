@@ -1,7 +1,7 @@
 '''
 Created on 22 janv. 2011
 
-@author: patt
+@author: epot
 '''
 
 from statusrequest import StatusRequest

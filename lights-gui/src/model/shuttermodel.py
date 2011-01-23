@@ -4,9 +4,9 @@ Created on 23 janv. 2011
 @author: epot
 '''
 
-class LightModel():
+class ShutterModel():
     '''
-    This class is used to define a light in your house.
+    This class is used to define a shutter in your house.
     TODO: add localization information
     '''
 
@@ -17,19 +17,12 @@ class LightModel():
         '''
         self.name = name
         self.id = id
-        self.dimmerId = None
     
     def getName(self):
         '''
         get current name
         '''
         return self.name
-    
-    def setDimmerId(self, id):
-        self.dimmerId = id
-        
-    def getDimmerId(self):
-        return self.dimmerId
     
     def getId(self):
         '''

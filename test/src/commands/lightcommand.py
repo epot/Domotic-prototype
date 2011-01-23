@@ -14,12 +14,8 @@ class LightCommand():
         '''
         Constructor
         '''
-        self.lights = []
-        self.lights.append(light)
+        self.light = light
         self.serialCom = serialCom
-        
-    def addLight(self, light):
-        self.lights.append(light)
         
     def setOn(self):
         self.__switchLights(True)
@@ -27,7 +23,9 @@ class LightCommand():
     def setOff(self):
         self.__switchLights(False)
         
+    def getLight(self):
+        return self.light
+        
     def __switchLights(self, on):
-        for light in self.lights:
-            cmd = lightbuscommand.LightBusCommand(on, light.getId())
-            self.serialCom.write(cmd.getMessage())
+        cmd = lightbuscommand.LightBusCommand(on, self.light.getId())
+        self.serialCom.write(cmd.getMessage())
