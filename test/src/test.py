@@ -35,10 +35,18 @@ def testMethod():
 def main():
     print "flan"
 #    testMethod()
-    cmd = initSaintRaphHouse()
-    cmd.setOn()
-    time.sleep(2)
-    cmd.setOff()
+#    cmd = initSaintRaphHouse()
+#    cmd.setOn()
+#    time.sleep(2)
+#    cmd.setOff()
+    ser = initSerial()
+    str = ""
+    while(True):
+        c = ser.read()
+        str += c
+        if(str.endswith("##")):
+            print "received = " + str
+            str = ""
 
 if __name__ == "__main__":
     try:

@@ -12,6 +12,8 @@ from commands.shuttercommand import ShutterCommand
 from model.shuttermodel import ShutterModel
 import serial
 
+from listener.SerialListenerThread import SerialListenerThread
+
 class MainWindow(QtGui.QMainWindow):
     '''
     classdocs
@@ -29,6 +31,10 @@ class MainWindow(QtGui.QMainWindow):
         self.__initModel()
         self.__createCentralWidget()
         self.__initMenuBar()
+        
+        # init thread dude !
+        thread = SerialListenerThread(self.ser, self)
+        thread.start()
         
     def __createCentralWidget(self):
         centralWidget = QtGui.QWidget(self)
@@ -86,8 +92,18 @@ class MainWindow(QtGui.QMainWindow):
             self.shutterButtons.append(shutterTuple)
             i += 1
            
+        cmdGrp = QtGui.QGroupBox(self.tr("Command"), self)   
+        layout = QtGui.QHBoxLayout(cmdGrp)
+        self.cmdEdit = QtGui.QLineEdit(self)
+        layout.addWidget(self.cmdEdit)
+        cmdBtn = QtGui.QPushButton(self.tr("Send"), self)
+        layout.addWidget(cmdBtn)
+        cmdBtn.clicked.connect(self.__sendCommand)
+        self.cmdEdit.returnPressed.connect(self.__sendCommand)
+           
         self.layout.addWidget(lightsGroup)
         self.layout.addWidget(shuttersGroup)
+        self.layout.addWidget(cmdGrp)
         self.layout.addStretch()
         self.layout.addLayout(layoutbTN) 
                
@@ -170,4 +186,11 @@ class MainWindow(QtGui.QMainWindow):
     @QtCore.pyqtSlot()
     def aboutThisApp(self):
         QtGui.QMessageBox.about(self, self.tr("About"), self.tr("This application allows you to turn on and off lights !!!"))
+
+    @QtCore.pyqtSlot()
+    def __sendCommand(self):
+        print "Sending command: " + self.cmdEdit.text()
+        self.ser.write(self.cmdEdit.text())
+        self.ser.flushOutput()
+
 
