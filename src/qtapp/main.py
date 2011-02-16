@@ -7,7 +7,7 @@ Created on 23 janv. 2011
 import sys
 import serial
 from PyQt4 import QtGui
-from widgets.mainwindow import MainWindow
+from qtapp.widgets.mainwindow import MainWindow
 
 def initSerial():
     ser = serial.Serial(2)

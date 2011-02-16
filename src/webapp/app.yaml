@@ -8,4 +8,4 @@ handlers:
   static_dir: stylesheets
 
 - url: /.*
-  script: test.py
+  script: boulourislights.py
