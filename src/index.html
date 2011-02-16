@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    You can turn on/off lights dude !!!
+    Please enter a light's name here:
+    <form action="/switchLightCommand" method="post">
+    	{% for lightModel in house.lightModels %}
+    		<div>{{lightModel.name}} 
+    			<input name="id" type="hidden" value={{lightModel.id}}>
+    			<input type="submit" value="On" name="action">
+    			<input type="submit" value="Off" name="action">
+    		</div>
+    	{% endfor %}
+    </form>
+    
+    <a href="{{ url }}">{{ url_linktext }}</a>
+
+  </body>
+</html>
+

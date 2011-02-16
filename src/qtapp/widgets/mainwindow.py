@@ -12,6 +12,8 @@ from commands.shuttercommand import ShutterCommand
 from model.shuttermodel import ShutterModel
 import serial
 
+from houses.house import House
+
 from listener.SerialListenerThread import SerialListenerThread
 
 class MainWindow(QtGui.QMainWindow):
@@ -127,27 +129,17 @@ class MainWindow(QtGui.QMainWindow):
         return self.ser
 
     def __initSaintRaphHouse(self):
+        house = House.initSaintRaph()
+        
         self.lightCommands = [] 
-        tvModel = LightModel("TV", 11430977)
-        #tvModel.setDimmerId(11430978)
-        self.lightCommands.append(LightCommand(tvModel, 
-                                               self.__getSerial()))
-        self.lightCommands.append(LightCommand(LightModel("Dining Room", 11431009), 
-                                               self.__getSerial()))
-        self.lightCommands.append(LightCommand(LightModel("Entrance", 12407681), 
-                                               self.__getSerial()))
-        self.lightCommands.append(LightCommand(LightModel("Kitchen", 12407137), 
-                                               self.__getSerial()))
-        self.lightCommands.append(LightCommand(LightModel("Rear kitchen", 12407745), 
-                                               self.__getSerial()))        
+        for lightModel in house.lightModels:
+            self.lightCommands.append(LightCommand(lightModel, 
+                                               self.__getSerial()))    
         
         self.shutterCommands = []
-        self.shutterCommands.append(ShutterCommand(ShutterModel("Kitchen", 12742113), 
-                                               self.__getSerial()))
-        self.shutterCommands.append(ShutterCommand(ShutterModel("Living Room 1", 12741985), 
-                                               self.__getSerial()))
-        self.shutterCommands.append(ShutterCommand(ShutterModel("Living Room 2", 12742273), 
-                                               self.__getSerial()))
+        for shutterModel in house.shutterModels:
+            self.shutterCommands.append(ShutterCommand(shutterModel, 
+                                               self.__getSerial()))  
     
     @QtCore.pyqtSlot()
     def __switchLight(self):

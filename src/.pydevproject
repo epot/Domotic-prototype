@@ -7,4 +7,8 @@
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/Boulouris</path>
 </pydev_pathproperty>
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>D:\Utils\Dev\Python2.5\Lib\site-packages</path>
+<path>D:\Utils\Dev\google_app_engine</path>
+</pydev_pathproperty>
 </pydev_project>

@@ -6,10 +6,16 @@ Created on 12 fevr. 2011
 
 import BaseHTTPServer
 import cgi
+from houses.house import House
+
+house = House.initSaintRaph()
 
 class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_POST(self):
-        print "allumer la lumiere " + str(self.headers.getheader('LightRequest'))
+        if(self.headers.getheader('Content-type') == "application/switchLight"):
+            print "allumer la lumiere " + str(self.headers.getheader('LightId'))  + " " + str(self.headers.getheader('On'))
+                
+        self.send_response(200, 'OK')
 
 def run(server_class=BaseHTTPServer.HTTPServer,
         handler_class=MyHandler):
