@@ -6,6 +6,8 @@ api_version: 1
 handlers:
 - url: /webapp/stylesheets
   static_dir: webapp/stylesheets
-
+- url: /webapp/js
+  static_dir: webapp/js
 - url: /.*
   script: webapp.py
+  

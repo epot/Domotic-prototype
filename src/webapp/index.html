@@ -1,16 +1,27 @@
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="/webapp/stylesheets/main.css" />
+    <script src="/webapp/js/util.js"></script>
+    <script>
+    function sendCmd(form) {      
+        downloadUrl("/sendCmd", "POST", "id=" + document.getElementById("id").value + "&action=" + document.getElementById("action").value, onSendCmdReturned);
+    }
+    function onSendCmdReturned(responseText) {
+    }
+    </script>
+
   </head>
   <body>
+  <input type="hidden" id='id' />
+    <input type="hidden" id='action' />
     You can turn on/off lights dude !!!
     Please enter a light's name here:
 	{% for lightModel in house.lightModels %}
-        <form action="/switchLightCommand" method="post">
+        <form action="javascript:sendCmd()">
     		<div>{{lightModel.name}}
     			<input name="id" type="hidden" value={{lightModel.id}}>
-    			<input type="submit" value="On" name="action">
-    			<input type="submit" value="Off" name="action">
+    			<input type="submit" value="On" name="action" onclick="document.getElementById('id').value='{{lightModel.id}}';document.getElementById('action').value='1'">
+    			<input type="submit" value="Off" name="action" onclick="document.getElementById('id').value='{{lightModel.id}}';document.getElementById('action').value='0'">
     		</div>
         </form>
 	{% endfor %}

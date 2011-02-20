@@ -21,7 +21,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             id = self.headers.getheader('LightId')
             on = self.headers.getheader('On')
             print "allumer la lumiere " + str(id)  + " " + str(on)
-            cmd = LightBusCommand(1 if on == "On" else 0, id)
+            cmd = LightBusCommand(1 if on == "1" else 0, id)
             try:
                 serialCom.write(cmd.getMessage())
             except BaseException,e:

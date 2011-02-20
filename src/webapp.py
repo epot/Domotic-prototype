@@ -58,10 +58,28 @@ class SwitchLightCommand(webapp.RequestHandler):
             pass
         self.redirect('/')
         
-
+class SendCmdHandler(webapp.RequestHandler):
+    def post(self): 
+        try:
+            logging.info(self.request)
+            logging.info(self.request.arguments())
+            logging.info(self.request.get('id'))
+            logging.info("on/off= " + self.request.get('action'))
+            logging.info("id= " + self.request.get('id'))
+            headers = {"Content-type": "application/switchLight",
+                       "Accept": "text/plain",
+                       "LightId": self.request.get('id'),
+                       "On" : self.request.get('action')}
+            conn = httplib.HTTPConnection(IP, PORT)
+            conn.request("POST", "/cgi-bin/query", "", headers)
+            response = conn.getresponse()
+            conn.close()
+        except:
+            pass
 
 application = webapp.WSGIApplication(
                                      [('/', MainPage),
+                                      ('/sendCmd', SendCmdHandler),
                                       ('/switchLightCommand', SwitchLightCommand)],
                                      debug=True)
 
