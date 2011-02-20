@@ -36,7 +36,7 @@ class MainPage(webapp.RequestHandler):
             'house': house
         }
 
-        path = os.path.join(os.path.dirname(__file__), 'index.html')
+        path = os.path.join(os.path.dirname(__file__), os.path.join('webapp','index.html'))
         self.response.out.write(template.render(path, template_values))
 
 class SwitchLightCommand(webapp.RequestHandler):

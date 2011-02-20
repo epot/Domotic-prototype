@@ -1,11 +1,11 @@
-application: helloworld
+application: boulouris
 version: 1
 runtime: python
 api_version: 1
 
 handlers:
-- url: /stylesheets
-  static_dir: stylesheets
+- url: /webapp/stylesheets
+  static_dir: webapp/stylesheets
 
 - url: /.*
-  script: boulourislights.py
+  script: webapp.py
