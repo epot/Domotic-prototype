@@ -41,23 +41,23 @@ class MainPage(webapp.RequestHandler):
 
 class SwitchLightCommand(webapp.RequestHandler):
     def post(self):
+        try:
+            logging.info(self.request.arguments())
+            logging.info(self.request.get('id'))
+            logging.info("on/off= " + self.request.get('action'))
+            logging.info("id= " + self.request.get('id'))
+            headers = {"Content-type": "application/switchLight",
+                       "Accept": "text/plain",
+                       "LightId": self.request.get('id'),
+                       "On" : self.request.get('action')}
+            conn = httplib.HTTPConnection(IP, PORT)
+            conn.request("POST", "/cgi-bin/query", "", headers)
+            response = conn.getresponse()
+            conn.close()
+        except:
+            pass
         self.redirect('/')
-        logging.info("on/off= " + self.request.get('action'))
-        logging.info("id= " + self.request.get('id'))
-        on = False
-        if(self.request.get('action') == "On"):
-            on = True 
-        headers = {"Content-type": "application/switchLight",
-                   "Accept": "text/plain",
-                   "LightId": self.request.get('id'),
-                   "On" : on}
-        conn = httplib.HTTPConnection(IP, PORT)
-        conn.request("POST", "/cgi-bin/query", "", headers)
-        response = conn.getresponse()
-        if response.status == httplib.OK:
-            print "Output from CGI request"
-            print response.read()
-        conn.close()
+        
 
 
 application = webapp.WSGIApplication(

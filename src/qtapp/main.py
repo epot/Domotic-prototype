@@ -10,7 +10,7 @@ from PyQt4 import QtGui
 from qtapp.widgets.mainwindow import MainWindow
 
 def initSerial():
-    ser = serial.Serial(2)
+    ser = serial.Serial(3)
     ser.setTimeout(0.5)
     print "Communicating through " + ser.portstr
     return ser

@@ -7,13 +7,25 @@ Created on 12 fevr. 2011
 import BaseHTTPServer
 import cgi
 from houses.house import House
+from opennitoo.lightbuscommand import LightBusCommand
+import serial
 
 house = House.initSaintRaph()
+serialCom = serial.Serial(3)
+serialCom.setTimeout(0.5)
+print "Communicating through " + serialCom.portstr
 
 class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_POST(self):
         if(self.headers.getheader('Content-type') == "application/switchLight"):
-            print "allumer la lumiere " + str(self.headers.getheader('LightId'))  + " " + str(self.headers.getheader('On'))
+            id = self.headers.getheader('LightId')
+            on = self.headers.getheader('On')
+            print "allumer la lumiere " + str(id)  + " " + str(on)
+            cmd = LightBusCommand(1 if on == "On" else 0, id)
+            try:
+                serialCom.write(cmd.getMessage())
+            except BaseException,e:
+                print "error= " + str(e)
                 
         self.send_response(200, 'OK')
 

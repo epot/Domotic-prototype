@@ -123,7 +123,7 @@ class MainWindow(QtGui.QMainWindow):
         
     def __getSerial(self):
         if(self.ser == None):
-            self.ser = serial.Serial(2)
+            self.ser = serial.Serial(3)
             self.ser.setTimeout(0.5)
             print "Communicating through " + self.ser.portstr
         return self.ser

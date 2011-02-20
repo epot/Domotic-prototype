@@ -17,6 +17,7 @@ class LightBusCommand(BusCommand):
         Constructor
         '''
         onValue = 1 if on else 0
+        print  str(on) + " " + str(onValue)
         BusCommand.__init__(self, LightBusCommand.whoValue, onValue, "#" + str(where) + "")
         
     def getStartScenario(self, dimmerId):

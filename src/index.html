@@ -5,15 +5,15 @@
   <body>
     You can turn on/off lights dude !!!
     Please enter a light's name here:
-    <form action="/switchLightCommand" method="post">
-    	{% for lightModel in house.lightModels %}
-    		<div>{{lightModel.name}} 
+	{% for lightModel in house.lightModels %}
+        <form action="/switchLightCommand" method="post">
+    		<div>{{lightModel.name}}
     			<input name="id" type="hidden" value={{lightModel.id}}>
     			<input type="submit" value="On" name="action">
     			<input type="submit" value="Off" name="action">
     		</div>
-    	{% endfor %}
-    </form>
+        </form>
+	{% endfor %}
     
     <a href="{{ url }}">{{ url_linktext }}</a>
 
